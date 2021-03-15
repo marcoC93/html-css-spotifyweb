@@ -1,0 +1,326 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/*  aside */
+
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  float: left;
+  width: 50px;
+  height: 100%;
+  background: #171501;
+}
+
+aside div#playlist {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+#logo-desktop img {
+  display: inline-block;
+  width: 200px;
+  padding: 20px;
+}
+
+#logo-mobile img {
+  display: none;
+}
+
+aside li {
+  padding: 10px;
+  color: grey;
+}
+
+aside li span {
+  display: inline-block;
+}
+
+aside ul {
+  padding: 10px;
+  list-style-type: none;
+  /* color: grey; */
+}
+
+#user span {
+  display: inline-block;
+}
+
+#user {
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+#user i {
+  padding: 10px;
+}
+
+main {
+  height: calc(100vh - 100px);
+  background: #117a37;
+}
+
+main::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Sezione principale */
+
+section i.fas {
+  display: block;
+  text-align: right;
+  font-size: 2em;
+}
+
+section nav ul {
+  display: none;
+}
+
+nav h2 {
+  display: block;
+  padding: 20px;
+  text-transform: capitalize;
+}
+
+#made4you {
+  padding-top: 30px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.artist {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.album {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.album img {
+  width: 100%;
+}
+
+.artist img {
+  width: 100%;
+  border-radius: 100%;
+}
+
+/* Footer  */
+
+.player {
+  position: relative;
+  flex-grow: 1;
+  margin: 0 75px;
+}
+
+.volume input {
+  display: inline;
+}
+
+/* Sezione footer */
+
+footer {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #171501;
+}
+
+.album-playing {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.album-playing img {
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+}
+
+.album-playing p {
+  padding: 5px;
+}
+
+.track {
+  display: none;
+}
+
+.player {
+  position: relative;
+  flex-grow: 1;
+  margin: 0 50px;
+}
+
+.player-top {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+}
+
+.player-bottom {
+  padding-top: 10px;
+  /* width: 150px; */
+}
+
+.player-bottom input {
+  width: 100%;
+}
+
+.player::after {
+  content: "2.38";
+  position: absolute;
+  top: 50%;
+  right: -50px;
+}
+
+.player::before {
+  content: "2.38";
+  position: absolute;
+  top: 50%;
+  left: -50px;
+}
+
+.volume {
+  display: none;
+}
+
+.volume i {
+  padding-right: 10px;
+}
+
+.volume input {
+  display: none;
+}
+
+/*  Media query per visualizza su tablet */
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 70%;
+    margin: 0 auto;
+    /* height: calc(100vh - 100px); */
+  }
+
+  /* section  */
+
+  section nav ul {
+    width: 70%;
+    margin: auto;
+    list-style-type: none;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  section nav li {
+    padding: 5px;
+  }
+
+  section i.fas {
+    display: none;
+  }
+
+  /* footer  */
+
+  .track {
+    display: inline;
+  }
+
+  .player {
+    position: relative;
+    flex-grow: 1;
+    margin: 0 75px;
+  }
+
+  .player-bottom {
+    padding-top: 10px;
+    /* width: 150px; */
+  }
+
+  .volume {
+    display: inline;
+  }
+}
+
+/*  Media query per visualizzazione su desktop */
+
+@media screen and (min-width: 992px) {
+  aside {
+    float: left;
+    width: 200px;
+  }
+
+  /*  aside */
+
+  #logo-desktop img {
+    display: inline-block;
+    width: 200px;
+    padding: 20px;
+  }
+
+  #logo-mobile img {
+    display: none;
+  }
+
+  aside li {
+    padding: 10px;
+    color: grey;
+  }
+
+  aside li span {
+    display: inline-block;
+  }
+
+  aside ul {
+    padding: 10px;
+    list-style-type: none;
+  }
+
+  #user span {
+    display: inline-block;
+  }
+
+  /* section */
+
+  section {
+    width: calc(100% - 200px);
+  }
+
+  /* Footer  */
+
+  .player {
+    position: relative;
+    flex-grow: 1;
+    margin: 0 75px;
+  }
+
+  .player-bottom {
+    /* width: 400px; */
+  }
+
+  .volume input {
+    display: inline;
+  }
+}
+

@@ -1,0 +1,61 @@
+/*  Media query per visualizzazione su desktop */
+
+@media screen and (min-width: 992px) {
+    aside {
+        float: left;
+        width: 200px;
+    }
+
+    /*  aside */
+
+    #logo-desktop img {
+        display: inline-block;
+        width: 200px;
+        padding: 20px;
+    }
+
+    #logo-mobile img {
+        display: none;
+    }
+    aside li {
+        padding: 10px;
+        color: grey;
+    }
+    aside li span {
+        display: inline-block;
+
+    }
+    aside ul {
+        padding: 10px;
+        list-style-type: none;
+    }
+
+#user span {
+    display: inline-block;
+    }
+
+    /* section */
+section {
+        width: calc(100% - 200px);
+}
+
+
+    /* Footer  */
+
+.player {
+        position:relative ;
+        flex-grow: 1;
+        margin: 0 75px;
+}
+
+
+.player-bottom {
+        /* width: 400px; */
+
+}
+
+.volume input {
+        display: inline;
+}
+
+}

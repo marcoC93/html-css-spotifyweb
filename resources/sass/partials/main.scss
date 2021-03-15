@@ -1,0 +1,57 @@
+main {
+    height: calc(100vh - 100px);
+    background: #117a37;
+
+}
+main::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+/* Sezione principale */
+nav {
+
+}
+section i.fas {
+    display: block ;
+    text-align: right;
+    font-size: 2em ;
+}
+
+section nav ul {
+display: none;
+}
+
+
+nav h2 {
+display: block;
+padding: 20px;
+text-transform: capitalize;
+
+}
+#made4you {
+padding-top: 30px;
+}
+#playlist {
+// padding-top:
+}
+.flex-container {
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+}
+.artist {
+max-width: 200px ;
+max-height: 200px;
+}
+.album {
+max-width: 200px ;
+max-height: 200px;
+}
+.album img {
+width: 100%;
+}
+.artist img {
+width: 100%;
+border-radius: 100%;
+}

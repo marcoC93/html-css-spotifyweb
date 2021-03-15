@@ -1,0 +1,55 @@
+
+/*  Media query per visualizza su tablet */
+
+@media screen and (min-width: 768px) {
+
+    .container {
+        width: 70%;
+        margin: 0 auto;
+
+        /* height: calc(100vh - 100px); */
+
+    }
+
+    /* section  */
+    section nav ul {
+        width: 70%;
+        margin: auto;
+        list-style-type: none;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    section nav li {
+        padding: 5px;
+    }
+    section i.fas {
+            display: none ;
+
+    }
+
+/* footer  */
+
+.track {
+        display: inline;
+}
+
+.player {
+    position:relative ;
+    flex-grow: 1;
+    margin: 0 75px;
+}
+
+.player-bottom {
+    padding-top: 10px;
+    /* width: 150px; */
+}
+
+.volume {
+    display: inline;
+}
+
+
+
+}
