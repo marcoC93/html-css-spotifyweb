@@ -14,5 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $data = [
+        'albums' => config('albums')
+    ];
+    return view('welcome', $data);
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home')
+
+;

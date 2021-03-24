@@ -11,7 +11,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Spotify - web</title>
-        <!-- Styles -->
+
         <main>
                 <!-- Sezione sinistra -->
             <aside class="">
@@ -92,29 +92,69 @@
                     <div id="playlist">
 
                         <div class="container">
-                            <h2>creato per te</h2>
+                            <div class="row-col-12">
+                                <h2>creato per te</h2>
+                            </div>
                             <div class="flex-container">
+                                <div class="row">
+                                    @foreach ($albums as $album)
+                                        <div class="col-md-3">
 
-                                <div class="artist">
-                                    <img src="https://i.ytimg.com/vi/K9bf4PT-aEk/maxresdefault.jpg" alt="">
-                                </div>
-                                <div class="artist">
-                                    <img src="esempio.jpg" alt="">
-                                </div>
-                                <div class="album">
-                                    <img src="esempio.jpg" alt="">
-                                </div>
-                                <div class="artist">
-                                    <img src="https://i.ytimg.com/vi/aR7EK2cYnPk/maxresdefault.jpg" alt="">
-                                </div>
-                                <div class="album">
-                                    <img src="esempio.jpg" alt="">
-                                </div>
-                                <div class="artist">
-                                    <img src="esempio.jpg" alt="">
-                                </div>
-                                <div class="album">
-                                    <img src="esempio.jpg" alt="">
+                                            <div class="rank">
+                                                3
+                                            </div>
+                                            <div class="front">
+                                                <img src="{{$album['src']}}" alt="">
+                                                <h3 class="name"> {{$album['artist']}} </h3>
+                                                <div class="stats">
+                                                    <div class="viewers">
+                                                        <div class="streamers">
+                                                            <h3>{{$album['name']}}</h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="back">
+                                                <div class="streaming-info">
+                                                    <p class="game-stat">55k <span>whatching</span></p>
+                                                    <p class="game-stat">25k<span>streams</span></p>
+                                                    <button type="button" class="btn" name="button">See more streams</button>
+                                                    <div class="streamers">
+                                                        <div class="streamer">
+                                                            <div class="icon">
+                                                                <img src="" alt="">
+                                                            </div>
+                                                            <p class="name">gamer 1</p>
+                                                            <p class="p-number">
+                                                                36k
+                                                            </p>
+                                                        </div>
+                                                        <div class="streamer">
+                                                            <div class="icon">
+                                                                <img src="" alt="">
+                                                            </div>
+                                                            <p class="name">ganer 2</p>
+                                                            <p class="p-number">
+                                                                11k
+                                                            </p>
+                                                        </div>
+                                                        <div class="streamer">
+                                                            <div class="icon">
+                                                                <img src="" alt="">
+                                                            </div>
+                                                            <p class="name">gamer 3</p>
+                                                            <p class="p-number">
+                                                                40k
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="background">
+
+                                            </div>
+                                        </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
