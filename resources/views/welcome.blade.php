@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -104,40 +105,30 @@
                                                 3
                                             </div>
                                             <div class="front">
+                                                {{-- Cover album --}}
                                                 <img src="{{$album['src']}}" alt="">
                                                 <h3 class="name"> {{$album['artist']}} </h3>
+                                                {{-- Info album --}}
                                                 <div class="stats">
                                                     <div class="viewers">
+                                                        {{-- Nome Album --}}
                                                         <div class="streamers">
                                                             <h3>{{$album['name']}}</h3>
+
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                            {{-- Quest'area verrá mostrata una volta terminato l'effetto di hover --}}
                                             <div class="back">
+                                                <h4 class="name"> {{$album['name']}} </h4>
+                                                {{-- La sezione sottostante verrá divisa in 2 colonne  --}}
                                                 <div class="streaming-info">
-                                                    <p class="game-stat">55k <span>whatching</span></p>
-                                                    <p class="game-stat">25k<span>streams</span></p>
-                                                    <button type="button" class="btn" name="button">See more streams</button>
+
+                                                    <p class="game-stat"> Anno </p>
+                                                    <p class="game-stat">{{$album['year']}}</p>
+
                                                     <div class="streamers">
-                                                        <div class="streamer">
-                                                            <div class="icon">
-                                                                <img src="" alt="">
-                                                            </div>
-                                                            <p class="name">gamer 1</p>
-                                                            <p class="p-number">
-                                                                36k
-                                                            </p>
-                                                        </div>
-                                                        <div class="streamer">
-                                                            <div class="icon">
-                                                                <img src="" alt="">
-                                                            </div>
-                                                            <p class="name">ganer 2</p>
-                                                            <p class="p-number">
-                                                                11k
-                                                            </p>
-                                                        </div>
                                                         <div class="streamer">
                                                             <div class="icon">
                                                                 <img src="" alt="">
@@ -149,6 +140,8 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <i class="far fa-play-circle btn"></i>
+
                                             </div>
                                             <div class="background">
 

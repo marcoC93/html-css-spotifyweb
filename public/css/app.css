@@ -11040,6 +11040,7 @@ section nav ul {
 nav h2 {
   display: block;
   padding: 20px;
+  margin-bottom: 30px;
   text-transform: capitalize;
 }
 
@@ -11085,8 +11086,9 @@ nav h2 {
 h1,
 h2,
 h3,
+h4,
 p {
-  margin: 0l auto;
+  margin: 5px auto;
 }
 
 img {
@@ -11099,7 +11101,7 @@ img {
   background: var(--clr-secondary);
   border-radius: 100vw;
   color: var(--clr-light);
-  padding: 0.5em 1.5em;
+  padding: 0.5em 1em;
   font-weight: bold;
 }
 
@@ -11120,11 +11122,12 @@ img {
 }
 
 .front .name {
-  text-align: center;
-  margin: 0.75em 0;
+  display: flex;
+  justify-content: center;
+  margin: 5px 0;
 }
 
-.front .stats {
+.front .album {
   display: flex;
   border: 1 solid red;
   justify-content: center;
@@ -11185,7 +11188,7 @@ img {
 }
 
 .back .streaming-info {
-  margin: 1em 0;
+  margin: 5px 0;
   -moz-columns: 2;
        columns: 2;
   -moz-column-rule: 1px solid rgba(255, 255, 255, 0.25);
@@ -11216,6 +11219,10 @@ img {
   border-radius: var(--br);
 }
 
+.col-md-3:hover h3 {
+  color: white;
+}
+
 .col-md-3:hover .rank {
   transform: translate(150%, -75%);
   background: red;
@@ -11224,6 +11231,10 @@ img {
 .col-md-3:hover .front {
   transform: translateY(-20%) scale(0.9);
   color: white;
+}
+
+.col-md-3:hover .front .streamers h3 {
+  display: none;
 }
 
 .col-md-3:hover .front .name {
@@ -11238,7 +11249,7 @@ img {
 
 .col-md-3:hover .back {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(-10%);
   transition: transform 250ms ease, opacity 150ms linear;
 }
 
@@ -11254,6 +11265,9 @@ img {
 }
 
 .col-md-3:hover .back .name {
+  display: flex;
+  justify-content: center;
+  margin: 2px 0;
   font-weight: bold;
   color: white;
 }

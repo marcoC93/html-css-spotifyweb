@@ -12,8 +12,9 @@
 h1,
 h2,
 h3,
+h4,
 p {
-    margin : 0l auto;
+    margin : 5px auto;
 
 
 
@@ -27,7 +28,7 @@ img {
     background: var(--clr-secondary);
     border-radius: 100vw;
     color: var(--clr-light);
-    padding: .5em 1.5em;
+    padding: .5em 1em;
     font-weight: bold;
 }
 .col-md-3 {
@@ -47,10 +48,11 @@ img {
         border-radius: var(--br);
     }
     .name {
-        text-align: center;
-        margin: .75em 0;
+        display: flex;
+        justify-content: center;
+        margin: 5px 0;
     }
-    .stats {
+    .album {
         display: flex;
         border: 1 solid red ;
         justify-content: center;
@@ -109,7 +111,7 @@ img {
 
 
     .streaming-info {
-        margin: 1em 0;
+        margin: 5px 0;
         columns: 2;
         column-rule: 1px solid rgba(255,255,255,.25);
     }
@@ -141,6 +143,9 @@ img {
 .col-md-3:hover {
 
 
+    h3 {
+        color: $card_hover_font;
+    }
 
     .rank {
         transform: translate(150%, -75%);
@@ -149,6 +154,11 @@ img {
     .front {
         transform: translateY(-20%) scale(.9);
         color: $card_hover_font;
+        .streamers {
+            h3 {
+                display: none;
+            }
+        }
         .name {
             animation: gameName() 250 forewards;
             color: $card_hover_font;
@@ -159,7 +169,7 @@ img {
      }
     .back{
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(-10%);
         transition: transform 250ms ease, opacity 150ms linear;
         .streamers {
             width: 100%;
@@ -171,6 +181,9 @@ img {
             color: $card_hover_font
         }
         .name {
+            display: flex;
+            justify-content: center;
+            margin: 2px 0;
             font-weight: bold;
             color: $card_hover_font;
         }
